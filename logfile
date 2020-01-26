@@ -1,0 +1,38 @@
+2020-01-23 21:26:05.626 JST [36308] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin16.7.0, compiled by Apple LLVM version 8.1.0 (clang-802.0.42), 64-bit
+2020-01-23 21:26:05.629 JST [36308] LOG:  listening on IPv6 address "::1", port 5432
+2020-01-23 21:26:05.629 JST [36308] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-01-23 21:26:05.631 JST [36308] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-01-23 21:26:05.646 JST [36309] LOG:  database system was shut down at 2020-01-23 21:25:54 JST
+2020-01-23 21:26:05.652 JST [36308] LOG:  database system is ready to accept connections
+2020-01-23 21:26:16.306 JST [36331] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:16.306 JST [36332] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:16.306 JST [36333] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:16.307 JST [36334] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:16.525 JST [36335] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:16.525 JST [36336] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.047 JST [36339] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.066 JST [36340] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.095 JST [36341] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.107 JST [36342] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.118 JST [36343] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.118 JST [36344] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.127 JST [36345] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.263 JST [36346] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.271 JST [36347] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.279 JST [36348] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.293 JST [36349] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.295 JST [36350] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.304 JST [36351] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.311 JST [36352] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.317 JST [36353] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.326 JST [36354] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:17.332 JST [36355] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:44.590 JST [36363] FATAL:  role "postgres" does not exist
+2020-01-23 21:26:57.231 JST [36368] FATAL:  database "sachigrannan" does not exist
+2020-01-23 21:28:45.319 JST [37331] FATAL:  database "sachigrannan" does not exist
+2020-01-23 21:29:27.706 JST [37336] FATAL:  database "sachigrannan" does not exist
+2020-01-23 21:32:17.136 JST [36308] LOG:  received fast shutdown request
+2020-01-23 21:32:17.137 JST [36308] LOG:  aborting any active transactions
+2020-01-23 21:32:17.142 JST [36308] LOG:  background worker "logical replication launcher" (PID 36315) exited with exit code 1
+2020-01-23 21:32:17.142 JST [36310] LOG:  shutting down
+2020-01-23 21:32:17.153 JST [36308] LOG:  database system is shut down
