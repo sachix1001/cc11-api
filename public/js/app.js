@@ -37,15 +37,19 @@ addButton.addEventListener("click", () => {
 const deleteButton = document.getElementById("delete");
 deleteButton.addEventListener("click", () =>{
     const deleteDetail = document.getElementById('deleteDetail').value;
-    fetch("/api/phone_book/:first", {
+    fetch(`/api/phone_book/${deleteDetail}`, {
         method: "DELETE",
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
+            Accept: "application/json",
+            "Content-Type": "application/json",
         },
-        body: deleteDetail
-      })
-      .then(function(response){
-          return response.text();
-      })
+        // body: deleteDetail
+    })
+    .then(function(response){
+        document.getElementById("deleteResponse").textContent = response;
+        return response.text();
+    })
+    .then(function(text) {
+        document.getElementById("deleteResponse").textContent = text;
+    });
 })
