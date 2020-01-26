@@ -1,17 +1,20 @@
-const config = require("./config");
-const knex = require("knex")(config.db);
-const models = require("./models")(knex);
+module.exports = {
+  db: {
+    client: "pg",
+    connection: process.env.DB_URL || {
+      host: process.env.DB_HOST || "127.0.0.1",
+      port: process.env.DB_PORT || 5432,
+      database: process.env.DB_NAME || "phone_book",
+      user: process.env.DB_USER || "postgres",
+      password: process.env.DB_PASSWORD || "postgres",
+    },
+  },
 
-const data = [
-  { first: "Deana", last: "Killough", phone: "(240) 215-9101" },
-  { first: "Tashina", last: "Versace", phone: "(993) 430-0489" },
-  { first: "Noel", last: "Jasik", phone: "(339) 825-8652" },
-  { first: "Phylicia", last: "Stodola", phone: "(649) 985-4202" },
-  { first: "Rachell", last: "Devries", phone: "(342) 570-7376" },
-  { first: "Deonna", last: "Gemmill", phone: "(743) 497-7694" },
-  { first: "Stephnie", last: "Royer", phone: "(444) 372-9626" },
-];
+  express: {
+    port: process.env.PORT || 3000,
+  },
 
-for (let i = 0; i < data.length; i++) {
-  models.phoneBook.create(data[i]);
-}
+  logger: {
+    format: "dddd MMMM Do YYYY, h:mm:ss a",
+  },
+};
