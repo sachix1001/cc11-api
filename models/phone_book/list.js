@@ -1,8 +1,3 @@
-module.exports = (knex, UserMessage) => {
-  return (params) => {
-    return Promise.resolve([]); // fix me!
-  };
-};
 module.exports = (knex, PhoneBook) => {
   return () => {
     return knex("phone_book")

@@ -13,13 +13,14 @@ module.exports = (models) => {
         last: req.body.last,
         phone: req.body.phone,
       })
-      .then((phoneBook) => res.status(201).json(phoneBook.serialize()))
+      // .then((phoneList) => phoneList.map((number) => number.serialize()))
+      .then((phoneBook) => res.status(201).json(phoneBook))
       .catch((err) => res.status(400).send(err.message));
 
   const listPhoneBook = (req, res) =>
     models.phoneBook
       .list()
-      .then((phoneList) => phoneList.map((number) => number.serialize()))
+      // .then((phoneList) => phoneList.map((number) => number.serialize()))
       .then((phoneList) => res.status(200).json(phoneList))
       .catch((err) => res.status(400).send(err.message));
 
