@@ -11,9 +11,9 @@ listButton.addEventListener("click", function() {
         return response.json();
     })
     .then(function(text) {
-        console.log(text)
-        text = text.map(personObj=>
-             `${personObj.first} ${personObj.last} : ${personObj.phone}`)
+        text = text.map(personObj=>{
+            console.log(`{"first":"${personObj.first}","last":"${personObj.last}","phone" "${personObj.phone}"}`)
+             return `${personObj.first} ${personObj.last} : ${personObj.phone}`})
              .join('<br/>')
       document.getElementById("getResponse").innerHTML = text;
     });
@@ -73,9 +73,11 @@ updateButton.addEventListener("click", () =>{
         body: updateDetail
     })
     .then(function(response){
-        return response.text();
+        return response.json();
     })
     .then(function(text) {
-        document.getElementById("updateResponse").textContent = text;
+        console.log(text)
+        text = `${text.first} ${text.last} : ${text.phone}`
+        document.getElementById("updateResponse").innerHTML = text;
     });
 })

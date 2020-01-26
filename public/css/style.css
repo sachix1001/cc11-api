@@ -6,6 +6,7 @@ body {
   height: 100%; /* force the BODY element to match the height of the HTML element */
   background-color: aliceblue;
   font-family: fantasy;
+  padding-left: 50px;
 }
 
 #title {
@@ -22,5 +23,9 @@ body {
   padding: 9px;
   border-radius: 4px;
   width: 200px;
+}
+
+.response{
+  padding: 20px;
 }
 
