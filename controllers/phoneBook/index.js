@@ -35,9 +35,9 @@ module.exports = (models) => {
   const updatePhone = (req, res) =>
     models.phoneBook
       .update({
-        first: req.params.first,
-        last: req.params.last,
-        phone: req.params.phone,
+        first: req.body.first,
+        last: req.body.last,
+        phone: req.body.phone,
       })
       .then((phone) => res.status(200).json(phone))
       .catch((err) => res.status(400).send(err.message));
@@ -49,7 +49,7 @@ module.exports = (models) => {
   router.post("/", createPhoneBook);
   router.get("/", listPhoneBook);
   router.delete("/:first", deletePhone);
-  router.patch("/:phone", updatePhone);
+  router.patch("/", updatePhone);
 
   return router;
 };

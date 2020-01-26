@@ -43,13 +43,31 @@ deleteButton.addEventListener("click", () =>{
             Accept: "application/json",
             "Content-Type": "application/json",
         },
-        // body: deleteDetail
     })
     .then(function(response){
-        document.getElementById("deleteResponse").textContent = response;
         return response.text();
     })
     .then(function(text) {
         document.getElementById("deleteResponse").textContent = text;
+    });
+})
+
+const updateButton = document.getElementById("update");
+updateButton.addEventListener("click", () =>{
+    const updateDetail = document.getElementById('updateDetail').value;
+    console.log(updateDetail)
+    fetch(`/api/phone_book/`, {
+        method: "PATCH",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: updateDetail
+    })
+    .then(function(response){
+        return response.text();
+    })
+    .then(function(text) {
+        document.getElementById("updateResponse").textContent = text;
     });
 })
