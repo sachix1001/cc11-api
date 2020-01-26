@@ -8,10 +8,14 @@ listButton.addEventListener("click", function() {
     },
   })
     .then(function(response) {
-      return response.text();
+        
+        return response.json();
     })
     .then(function(text) {
-      document.getElementById("getResponse").textContent = text;
+        text = text.map(personObj=>
+             `${personObj.first} ${personObj.last} : ${personObj.phone}`)
+             .join('<br/>')
+      document.getElementById("getResponse").innerHTML = text;
     });
 });
 
@@ -27,11 +31,12 @@ addButton.addEventListener("click", () => {
         body: (addDetail)
     })
     .then(function(response){
-        return response.text();
+        return response.json();
     })
     .then(function(text) {
-        document.getElementById("addResponse").textContent = text;
-      });
+        text = `${text.first} ${text.last} : ${text.phone}`
+        document.getElementById("addResponse").innerHTML = text;
+    });
 })
 
 const deleteButton = document.getElementById("delete");
@@ -45,10 +50,14 @@ deleteButton.addEventListener("click", () =>{
         },
     })
     .then(function(response){
-        return response.text();
+        console.log(response)
+        return response.json();
     })
     .then(function(text) {
-        document.getElementById("deleteResponse").textContent = text;
+        text = text.map(personObj=>
+            `${personObj.first} ${personObj.last} : ${personObj.phone}`)
+            .join('<br/>')
+        document.getElementById("deleteResponse").innerHTML = text;
     });
 })
 
