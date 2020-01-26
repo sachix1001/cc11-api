@@ -1,8 +1,8 @@
 module.exports = (knex, PhoneBook) => {
   return (params) => {
-    const { phone } = params;
+    const { first } = params;
     return knex("phone_book")
-      .where({ phone })
+      .where({ first})
       .del()
       .then(() => {
         return knex("phone_book").select();

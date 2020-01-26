@@ -27,7 +27,7 @@ module.exports = (models) => {
   const deletePhone = (req, res) =>
     models.phoneBook
       .delete({
-        phone: req.params.phone,
+        first: req.params.first,
       })
       .then((phoneList) => res.status(200).json(phoneList))
       .catch((err) => res.status(400).send(err.message));
@@ -48,7 +48,7 @@ module.exports = (models) => {
   const router = express.Router();
   router.post("/", createPhoneBook);
   router.get("/", listPhoneBook);
-  router.delete("/:phone", deletePhone);
+  router.delete("/:first", deletePhone);
   router.patch("/:phone", updatePhone);
 
   return router;
