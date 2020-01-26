@@ -1,6 +1,6 @@
 const listButton = document.getElementById("list");
 listButton.addEventListener("click", function() {
-  fetch("/api/phone_book/", {
+    fetch("/api/phone_book/", {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -8,10 +8,10 @@ listButton.addEventListener("click", function() {
     },
   })
     .then(function(response) {
-        
         return response.json();
     })
     .then(function(text) {
+        console.log(text)
         text = text.map(personObj=>
              `${personObj.first} ${personObj.last} : ${personObj.phone}`)
              .join('<br/>')
@@ -50,7 +50,6 @@ deleteButton.addEventListener("click", () =>{
         },
     })
     .then(function(response){
-        console.log(response)
         return response.json();
     })
     .then(function(text) {

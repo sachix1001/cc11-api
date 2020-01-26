@@ -38,7 +38,7 @@ Type data and click ADD button
 (data has to be the below format)
 
 ```
-{first: "firstname", last: "lastmane, phone: "phoneNumber"}
+{first: "firstname", last: "lastname, phone: "phoneNumber"}
 ```
 
 - DELETE
@@ -51,6 +51,6 @@ sachi
 - UPDATE
 Type data and click UPDATE button (you can only update firstname or lastname)
 ```
-{first: "firstname", last: "lastmane, phone: "phoneNumber"}
+{first: "firstname", last: "lastname, phone: "phoneNumber"}
 ```
 
